@@ -8,6 +8,7 @@ module.exports = {
 		res.sendFile(path.join(__dirname, '../../public/styles.css'))
 	},
 	homeJS: (req, res) => {
+		console.log('you got here')
 		res.sendFile(path.join(__dirname, '../../public/home.js'))
 	}
 }
