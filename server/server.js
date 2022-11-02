@@ -10,7 +10,7 @@ app.use(cors())
 const {homeHTML, homeCSS} = require('./controllers/pageCtrl')
 
 app.get('/', homeHTML)
-app.get('/css', homeHTML)
+app.get('/css', homeCSS)
 
 const { PORT } = process.env
 
