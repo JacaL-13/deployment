@@ -1,7 +1,10 @@
 const path = require('path')
 
 module.exports = {
-	home: (req, res) => {
+	homeHTML: (req, res) => {
 		res.sendFile(path.join(__dirname, '../../public/index.html'))
+	},
+	homeCSS: (req, res) => {
+		res.sendFile(path.join(__dirname, '../../public/styles.css'))
 	}
 }

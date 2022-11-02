@@ -6,11 +6,11 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-app.use('/css', express.static(path.join(__dirname, '../public/styles.css')))
 
-const {home} = require('./controllers/pageCtrl')
+const {homeHTML, homeCSS} = require('./controllers/pageCtrl')
 
-app.get('/', home)
+app.get('/', homeHTML)
+app.get('/css', homeHTML)
 
 const { PORT } = process.env
 
