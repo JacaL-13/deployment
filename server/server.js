@@ -10,6 +10,8 @@ app.use(cors())
 
 const {homeHTML, homeCSS, homeJS} = require('./controllers/pageCtrl')
 
+
+
 console.log(path.join(__dirname, '../public/home.js'))
 
 app.get('/', homeHTML)
