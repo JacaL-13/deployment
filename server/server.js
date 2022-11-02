@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 require('dotenv').config()
+const path = require('path')
 
 const app = express()
 
@@ -9,9 +10,13 @@ app.use(cors())
 
 const {homeHTML, homeCSS, homeJS} = require('./controllers/pageCtrl')
 
+console.log(path.join(__dirname, '../public/home.js'))
+
 app.get('/', homeHTML)
 app.get('/css', homeCSS)
-app.get('/js', homeJS)
+app.get('/js', (req, res) => {
+	res.sendFile(path.join(__dirname, '../public/home.js'))
+  })
 
 const { PORT } = process.env
 
