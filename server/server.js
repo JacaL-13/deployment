@@ -11,6 +11,7 @@ const {homeHTML, homeCSS} = require('./controllers/pageCtrl')
 
 app.get('/', homeHTML)
 app.get('/css', homeCSS)
+app.get('/js', homeJS)
 
 const { PORT } = process.env
 

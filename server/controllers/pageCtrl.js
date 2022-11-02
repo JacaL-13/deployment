@@ -6,5 +6,8 @@ module.exports = {
 	},
 	homeCSS: (req, res) => {
 		res.sendFile(path.join(__dirname, '../../public/styles.css'))
+	},
+	homeJS: (req, res) => {
+		res.sendFile(path.join(__dirname, '../../public/home.js'))
 	}
 }
