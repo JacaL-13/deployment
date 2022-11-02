@@ -16,3 +16,5 @@ app.get('/js', homeJS)
 const { PORT } = process.env
 
 app.listen(PORT, () => console.log('Server listening on port ' + PORT))
+
+// The resource from “https://deployment7882.herokuapp.com/js” was blocked due to MIME type (“text/html”) mismatch (X-Content-Type-Options: nosniff).
